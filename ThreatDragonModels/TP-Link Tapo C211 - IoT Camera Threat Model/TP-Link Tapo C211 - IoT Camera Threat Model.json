@@ -1,0 +1,18 @@
+{
+  "version": "2.6.2",
+  "release_version": "1.0",
+  "released_at": "2026-10-28",
+  "summary": {
+    "title": "TP-Link Tapo C211 - IoT Camera Threat Model",
+    "owner": "Cyberb3an",
+    "description": "Threat model of the TP-Link Tapo C211 pan/tilt indoor Wi-Fi home security camera and its ecosystem, produced for the CMP308 IoT camera investigation (EH3). The model covers the camera device and its firmware, the on-device RTSP/ONVIF services, the Tapo mobile app, TP-Link cloud services (Tapo Care), local network communication, microSD local storage and firmware updates.\n\nUnit under test: base-labelled Tapo C211, but all regulatory identifiers (FCC ID 2BCGWC200V5, IC 31152-C200V5, HVIN Tapo C200V5, KC ref TapoC210) indicate the underlying hardware is the C200 V5 platform, shared across the C200/C210/C211 line. This is relevant to threat applicability: vulnerabilities affecting the C200 hardware and firmware lineage (e.g. CVE-2025-8065 ONVIF SOAP RCE, CVE-2025-14300 unauthenticated connectAP, CVE-2025-14299 Content-Length validation) may apply to this device and are to be verified against its actual firmware version.\n\nConnectivity: 2.4 GHz 802.11 b/g/n only (no Ethernet, no 5 GHz); WPA/WPA2-PSK; TLS/AES in transit; supports RTSP and ONVIF.\n\nScope: hardware teardown and local/network penetration testing are in scope. TP-Link cloud services and Tapo accounts must not be attacked; the unit must not be physically destroyed. Cloud-side components are modelled for completeness but marked out of scope for testing.",
+    "id": 0
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [],
+    "diagramTop": 0,
+    "reviewer": "--",
+    "threatTop": 0
+  }
+}
