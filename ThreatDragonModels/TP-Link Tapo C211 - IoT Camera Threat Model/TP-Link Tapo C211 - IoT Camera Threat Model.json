@@ -226,15 +226,15 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Boundary",
-              "name": "Trust Boundary",
-              "description": "",
+              "name": "TP-Link cloud boundary (OUT OF SCOPE TO TEST)",
+              "description": "TP-Link’s hosted services (Tapo Care and account/API infrastructure). Shown for reference but must NOT be attacked.",
               "isTrustBoundary": true,
               "hasOpenThreats": false,
               "crossingFlows": [],
               "containedElements": []
             },
             "labels": [
-              "Trust Boundary"
+              "TP-Link cloud boundary (OUT OF SCOPE TO TEST)"
             ],
             "id": "da2b2148-500a-4dd2-9dba-48a4f348a154",
             "source": {
@@ -257,6 +257,9 @@
               "height": 60
             },
             "attrs": {
+              "text": {
+                "text": "User"
+              },
               "body": {
                 "stroke": "#333333",
                 "strokeWidth": 1.5,
@@ -351,13 +354,13 @@
             "zIndex": 0,
             "data": {
               "type": "tm.Actor",
-              "name": "Actor",
-              "description": "",
+              "name": "User",
+              "description": "Legitimate owner operating the camera through the Tapo mobile app. Trusted actor; entry point for credential and account-based threats.",
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
-              "providesAuthentication": false,
+              "providesAuthentication": true,
               "threats": []
             }
           },
@@ -722,6 +725,9 @@
               "height": 60
             },
             "attrs": {
+              "text": {
+                "text": "Cloud API"
+              },
               "body": {
                 "stroke": "#333333",
                 "strokeWidth": 1.5,
@@ -816,8 +822,8 @@
             "zIndex": 4,
             "data": {
               "type": "tm.Process",
-              "name": "Process",
-              "description": "",
+              "name": "Cloud API",
+              "description": "TP-Link cloud endpoint for authentication, remote viewing and device registration. Out of scope for active testing.",
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
