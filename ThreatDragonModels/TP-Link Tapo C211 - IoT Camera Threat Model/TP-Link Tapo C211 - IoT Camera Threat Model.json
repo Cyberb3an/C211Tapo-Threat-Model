@@ -22,7 +22,7 @@
           {
             "position": {
               "x": 580,
-              "y": 20
+              "y": 35
             },
             "size": {
               "width": 420,
@@ -43,7 +43,9 @@
               "description": "Local Wi-Fi network (2.4 GHz WPA/WPA2-PSK) connecting the camera, its services and the user’s phone. In scope for local/network testing.",
               "isTrustBoundary": true,
               "hasOpenThreats": false,
-              "crossingFlows": [],
+              "crossingFlows": [
+                "82a1e5b7-4b13-465d-a31a-4f0dd67ecac4"
+              ],
               "containedElements": [
                 "86153fcf-7a01-49b8-8aa4-3305da9dee88",
                 "080745cc-6deb-4cc0-924a-40c3642210b0",
@@ -75,7 +77,9 @@
               "description": "TP-Link’s hosted services (Tapo Care and account/API infrastructure). Shown for completeness but must NOT be attacked.",
               "isTrustBoundary": true,
               "hasOpenThreats": false,
-              "crossingFlows": [],
+              "crossingFlows": [
+                "a35baab1-7daf-484a-8f51-cdbf8d8b118d"
+              ],
               "containedElements": [
                 "448ec1e0-d28d-4d2b-94c4-c7aa1f0c0a3c",
                 "059233a9-447e-4c59-bf02-422f706664f4"
@@ -85,7 +89,7 @@
           },
           {
             "position": {
-              "x": 392.5,
+              "x": 352.5,
               "y": 150
             },
             "size": {
@@ -336,7 +340,7 @@
               "body": {
                 "stroke": "#333333",
                 "strokeWidth": 1.5,
-                "strokeDasharray": "4 3"
+                "strokeDasharray": null
               }
             },
             "visible": true,
@@ -443,7 +447,7 @@
           {
             "position": {
               "x": 649,
-              "y": 240
+              "y": 250
             },
             "size": {
               "width": 60,
@@ -579,11 +583,11 @@
               },
               "topLine": {
                 "strokeWidth": 1.5,
-                "strokeDasharray": "4 3"
+                "strokeDasharray": null
               },
               "bottomLine": {
                 "strokeWidth": 1.5,
-                "strokeDasharray": "4 3"
+                "strokeDasharray": null
               }
             },
             "visible": true,
@@ -927,6 +931,212 @@
               "threats": []
             },
             "zIndex": 8
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "App control /\nlogin",
+              "description": "User commands and credentials from the app to the camera and cloud.",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": [
+                "458dbd55-b4af-436e-8544-9e59a43cbfe2"
+              ]
+            },
+            "labels": [
+              "App control /\nlogin"
+            ],
+            "id": "82a1e5b7-4b13-465d-a31a-4f0dd67ecac4",
+            "source": {
+              "cell": "601f761d-50b5-4469-899f-274b1d6c277a",
+              "port": "4f0b43b6-d024-45da-83e7-e3b974cedffb"
+            },
+            "target": {
+              "cell": "86153fcf-7a01-49b8-8aa4-3305da9dee88",
+              "port": "4985abcd-7239-4b63-a2ef-cd72a1fc8ec8"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Local pairing /\nLAN control",
+              "description": "App-to-camera setup and control over the local network.",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Local pairing /\nLAN control"
+            ],
+            "id": "c8e7e22a-96cc-4663-ab81-cd889329b174",
+            "source": {
+              "cell": "86153fcf-7a01-49b8-8aa4-3305da9dee88",
+              "port": "dd7f178c-82cc-4656-a130-5f0da337fa97"
+            },
+            "target": {
+              "cell": "f6426ae2-4f38-4651-ab2c-a76430e789b1",
+              "port": "4985abcd-7239-4b63-a2ef-cd72a1fc8ec8"
+            },
+            "vertices": [
+              {
+                "x": 790,
+                "y": 100
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Local video stream",
+              "description": "Live video from the camera's RTSP/ONVIF service to app over the LAN.",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Local video stream"
+            ],
+            "id": "6e0d79b7-8e4c-4c4a-8c7b-4b9d225d70b3",
+            "source": {
+              "cell": "86153fcf-7a01-49b8-8aa4-3305da9dee88",
+              "port": "578d4a57-494c-4d25-b239-e8107f310625"
+            },
+            "target": {
+              "cell": "61ccc4d4-60b2-4e26-9d37-babee7e0366f",
+              "port": "4985abcd-7239-4b63-a2ef-cd72a1fc8ec8"
+            },
+            "vertices": [
+              {
+                "x": 770,
+                "y": 180
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "///",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": [
+                "4a4d7c2c-657b-4db3-b935-1261adf80bfb"
+              ]
+            },
+            "labels": [
+              "///"
+            ],
+            "id": "a35baab1-7daf-484a-8f51-cdbf8d8b118d",
+            "source": {
+              "x": 680,
+              "y": 300
+            },
+            "target": {
+              "cell": "448ec1e0-d28d-4d2b-94c4-c7aa1f0c0a3c",
+              "port": "dd7f178c-82cc-4656-a130-5f0da337fa97"
+            },
+            "vertices": [
+              {
+                "x": 680,
+                "y": 380
+              }
+            ]
           }
         ],
         "description": "Data flow diagram of the tapo C211 camera, app, cloud and local network"
